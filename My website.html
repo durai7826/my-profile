@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="image/d_logo.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Python Fullstack Developer</p>
+                <h1>Hi, i'm <span>Durai B</span><br>From Chennai</h1>
+            </div>
+        </div>
+        <!-----about----->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="image/picture.png" alt="">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-tittle">About me...</h1>
+                        <p> Aspire fresher in Python Full-Stack Development
+                            with proficiency in Django.Skilled in HTML, CSS, Python 
+                            and Mysql. Strong foundation in web development
+                            principles. Excellent problem-solving abilities demonstrated
+                            through diverse projects. Passionate about continuous
+                            learning and eager to contribute to dynamic development
+                            teams.</p>
+                            <div class="tab-titles">
+                                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                                <p class="tab-links" onclick="opentab('education')">Education</p>
+                                <p class="tab-links" onclick="opentab('strength')">Strength</p>
+                                <p class="tab-links" onclick="opentab('interest')">Interest</p>
+                                <p class="tab-links" onclick="opentab('languages')">Languages</p>
+                            </div>
+                            <div class="tab-contents active-tab" id="skills">
+                                <ul>
+                                    <li><span>Html</span><br>Designing web/app interfaces</li>
+                                    <li><span>Css</span><br>Web/app styling</li>
+                                    <li><span>JavaScript</span><br>Logical seqence</li>
+                                    <li><span>Python</span><br>Designing web/app structure</li>
+                                    <li><span>Django</span><br>Framework</li>
+                                    <li><span>Mysql</span><br>Database server</li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="education">
+                                <ul>
+                                    <li><span>BSc-Computer Science</span><br>University Of Madras, 2020-2023<br>CGPA-7.8%</li>
+                                    <li><span>HSC-Higher Sec Board Exam</span><br>MK Govt Boys Hr Sec School, 2018-2020 <br>Guruvarajapet.</li>
+                                    <li><span>SSLC-High School Board Exam</span><br>MK Govt Boys Hr Sec School, 2016-2018 <br>Guruvarajapet.</li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="strength">
+                                <ul>
+                                    <li><span>Open Minded person</span> </li>
+                                    <li><span>Self Motivated And Confident</span></li>
+                                    <li><span>Time Management</span></li>
+                                    <li><span>Team Work</span></li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="interest">
+                                <ul>
+                                    <li><span>Creating new web pages</span> </li>
+                                    <li><span>Reading Books</span></li>
+                                    <li><span>Playing Cricket and Volleyball</span></li>
+                                    <li><span>Travelling</span></li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="languages">
+                                <ul>
+                                    <li><span>English</span></li>
+                                    <li><span>Tamil</span></li>
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---projects----->
+    <div id="projects">
+        <div class="container">
+            <h1 class="sub-tittle">My Projects</h1>
+            <div class="project-list">
+                <div>
+                    <h2>Blood Bank Management System</h2>
+                    <p>The Blood Bank Management System is a webbased application designed <br>
+                        to facilitate the efficient management of blood donation, storage, <br>
+                        and distribution processes. Developed using Django and Python, the <br>
+                        system aims to streamline operations, enhance coordination, and  <br>
+                        ensure the availability of blood for those in need.</p>
+                        <a href="#">learn more</a>
+                </div>
+                <div>
+                    <h2>Student Management System</h2>
+                    <p>Creating a student management system GUI using tkinter <br>
+                        involves designing a window with input fields for student <br>
+                        details, buttons for adding and a table for displaying <br>
+                        the student data.</p>
+                        <a href="#">learn more</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+</body>
+</html>
